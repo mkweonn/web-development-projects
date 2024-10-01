@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Michelle Kweon's Final Project Summary - a website designed to help users discover and review cafes in Los Angeles. Learn about its purpose, features, design, scope, and database.">
+
+	<title>Final Project Proposal | Michelle Kweon</title>
+	<link rel="stylesheet" href="shared.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<style>
+		body {
+            background-color: #FDFBF7;
+        }
+        #table {
+        	width: 500px;
+        }
+	</style>
+</head>
+<body>
+	 <nav class="navbar">
+        <a class="navbar-brand" href="search_discover_page.php">
+            <img src="img/club.png" width="30" height="30" alt="club symbol">
+        </a>
+        <ul class="nav justify-content-end">
+          <li class="nav-item">
+            <a class="nav-link" href="search_discover_page.php">discover</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="add_page.php">add</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="search_hops_page.php">hops</a>
+          </li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="row header">
+                    <h1 class="col-12 mt-5"><strong>PROJECT SUMMARY</strong></h1>
+                </div> <!-- .row -->
+            </div>
+        </div>
+    </div> 
+
+    <div class="container">
+    	<h2>Topic and Scope</h2>
+		<p>This website allows users to discover and review cafes in Los Angeles. Users can search for cafes in the area as well as track the ones they've visited and log their experiences. It is intended for various audiences such as cafe hoppers and coffee enthusiasts, including students and remote workers, looking for a social or cozy enviornment to work or enjoy a drink.</p>
+
+		<p>There are three main pages for this website. The first page is the discover section where users can search new cafes based on the name, cafe type (study, aesthetic, late night, taste, etc), and location of the LA area (Koreatown, DTLA, etc). It does not display cafes they have already been to. It will display the cafe as well as some info about it such as price and hours. The hops page allow them to track the cafes they have been to by adding and deleting items. It only shows the ones they have ranked. They can also filter them based on location and cafe type. Lastly, the add/edit pages allow them to input information about a cafe they went to. It will have details about the cafe (their review) and be added to their list.</p>
+
+		<h2>Data</h2>
+		<p>The source of the data is through my SQL database which includes some pre-stored cafes as well as cafes that the user will input/generate themselves. It storse information about cafes in LA such as their names, locations, cafe type, and its features.</p>
+		<p>Database Diagram:</p>
+		<img id="table" src="img/database.png" alt="Database Diagram" class="mx-auto d-block">
+
+		<h2>Extras</h2>
+		<p>The three extras I used for the project are Responsive Web Design, Pagination, and SQL aggregate function. THe responsive web design was implemented through using CSS framework Bootstrap. Pagination was used on the discover page where it only displays six cafes per page. I used the RAND() function with ORDER BY clause to display cafes in random order everytime user clicks on the discover button. <a href="https://getbootstrap.com/docs/4.0/getting-started/introduction/" target="_blank">Bootstrap</a> was used as the primary CSS framework for the main design of the project. It is used for the navbar and main pages styling such as fonts, formatting, and spacing.</p> 
+	</div>
+</body>
+</html>
