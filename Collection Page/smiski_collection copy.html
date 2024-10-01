@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>To Do List | DOM Manipulation</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link href="lib/font/css/open-iconic-bootstrap.min.css" rel="stylesheet">
+	<style>
+		.todo-remove {
+			cursor: pointer;
+			color: #CCC;
+		}
+		.todo-remove:hover {
+			color: #dc3545;
+		}
+		.todo-remove:active {
+			color: #ba1323;
+		}
+	</style>
+
+</head>
+<body class="py-4">
+
+	<div class="container">
+		<div class="row">
+			<h1 class="col-12">USC Task Manager</h1>
+		</div> <!-- .row -->
+
+		<div class="row mt-4">
+			<h2 class="col-12">Simple To Do List</h2>
+			<div class="col-12 mt-4">
+				<form id="simple-todo">
+					<div class="form-row">
+						<div class="col-12 mt-2 col-sm-6 mt-sm-0">
+							<label for="simple-item" class="sr-only">To do item:</label>
+
+							<input type="text" class="form-control" id="simple-item" placeholder="New To Do Item...">
+
+						</div> <!-- .col -->
+						<div class="col-12 mt-2 col-sm-auto mt-sm-0">
+							<button role="button" type="submit" class="btn btn-primary">Add</button>
+						</div> <!-- .col -->
+					</div> <!-- .form-row -->
+				</form>
+			</div> <!-- .col -->
+		</div> <!-- .row -->
+
+		<div class="row">
+			<div class="col-12 mt-3">
+
+				<button id="simple-delete" class="btn btn-outline-danger mb-3">Delete All</button>
+
+				<table id="simple-list" class="table table-hover">
+					<thead>
+						<tr>
+							<th>Item</th>
+						</tr>
+					</thead>
+
+					<tbody>
+
+						<tr>
+							<td>Cras justo odio</td>
+						</tr>
+
+						<tr>
+							<td>Dapibus ac facilisis in</td>
+						</tr>
+
+						<tr>
+							<td>Morbi leo risus</td>
+						</tr>
+
+					</tbody>
+
+				</table>
+			</div> <!-- .col -->
+		</div> <!-- .row -->
+
+		<div class="row mt-4">
+			<h2 class="col-12">Prioritized To Do List</h2>
+			<div class="col-12 mt-4">
+				<form id="prio-todo">
+					<div class="form-row">
+						<div class="col-12 mt-2 col-sm-6 mt-sm-0">
+							<label for="prio-item" class="sr-only">To do item:</label>
+
+							<input type="text" class="form-control" id="prio-item" placeholder="New To Do Item...">
+
+						</div> <!-- .col -->
+						<div class="col-12 mt-2 col-sm-3 mt-sm-0">
+							<label for="priority" class="sr-only">Priority:</label>
+
+							<select id="priority" class="form-control">
+								<option value="High">High</option>
+								<option value="Medium">Medium</option>
+								<option value="Low">Low</option>
+							</select>
+
+						</div> <!-- .col -->
+						<div class="col-12 mt-2 col-sm-auto mt-sm-0">
+							<button role="button" type="submit" class="btn btn-primary">Add</button>
+						</div> <!-- .col -->
+					</div> <!-- .form-row -->
+				</form>
+			</div> <!-- .col -->
+		</div> <!-- .row -->
+
+		<div class="row">
+			<div class="col-12 col-sm-8 mt-3">
+
+				<button id="prio-delete" class="btn btn-outline-danger mb-3">Delete All</button>
+
+				<ul id="prio-list" class="list-group">
+					
+					<li class="list-group-item d-flex justify-content-between">
+						<div class="todo-item">Cras justo odio</div>
+						<div class="todo-info">
+							<span class="badge badge-pill mr-3 badge-danger">High</span>
+							<span class="todo-remove oi oi-circle-x" title="Remove"></span>
+						</div>
+					</li>
+					
+					<li class="list-group-item d-flex justify-content-between">
+						<div class="todo-item">Dapibus ac facilisis in</div>
+						<div class="todo-info">
+							<span class="badge badge-pill mr-3 badge-warning">Medium</span>
+							<span class="todo-remove oi oi-circle-x" title="Remove"></span>
+						</div>
+					</li>
+					
+					<li class="list-group-item d-flex justify-content-between">
+						<div class="todo-item">Morbi leo risus</div>
+						<div class="todo-info">
+							<span class="badge badge-pill mr-3 badge-success">Low</span>
+							<span class="todo-remove oi oi-circle-x" title="Remove"></span>
+						</div>
+					</li>
+
+				</ul>
+
+			</div> <!-- .col -->
+		</div> <!-- .row -->
+	</div> <!-- .container -->
+
+	<script>
+		document.querySelector("#simple-delete").onclick = () => {
+			document.querySelector("#simple-list tbody").innerHTML = ''
+		}
+
+		document.querySelector("#simple-todo").onsubmit = () => {
+			const input = document.querySelector("#simple-item").value.trim()
+
+			// create list itme only when users fill out the form
+			if (input.length > 0) {
+
+				/*
+					loop all the items to find duplicate
+						if duplicate found:
+							- show error message
+							- terminate function
+				*/
+
+				const listItems = document.querySelectorAll("#simple-list td")
+
+				for (item of listItems) {
+					if (input === item.innerHTML) {
+						alert(input + " is already on the list.")
+						return false
+					}
+				}
+
+				let tableBody = document.querySelector("#simple-list tbody")
+				const firstItem = document.querySelectorAll("#simple-list tbody tr")[0]
+
+				// tableBody.innerHTML = tableBody.innerHTML + "<tr class=""><td>New Item</td></tr>"
+
+				// innerHTML is NOT an optimal way to create new HTML elements.
+
+				/*
+					<tr class="">
+						<td>New Item</td>
+					</tr>
+				*/
+
+				// Create element nodes
+				const tr = document.createElement("tr")
+				const td = document.createElement("td")
+
+				td.innerHTML = input
+
+				// Structure the elements and add it to the DOM
+				tr.appendChild(td)
+				// tableBody.appendChild(tr)
+				tableBody.insertBefore(tr, firstItem)
+
+				// clear the input field
+				document.querySelector("#simple-item").value = ''
+			}
+
+			return false
+		}
+
+		// 	PRIORITIZED TO DO LIST
+
+		function bindRemoveBtns() {
+			const removeBtns = document.querySelectorAll(".todo-remove")
+
+			for (let i = 0; i < removeBtns.length; i++) {
+				removeBtns[i].onclick = function() {
+					// console.log(this)
+					this.parentElement.parentElement.remove()
+				}
+			}
+		}
+
+		bindRemoveBtns()
+
+		document.querySelector("#prio-delete").onclick = () => {
+			document.querySelector("#prio-list").innerHTML = ''
+		}
+
+		document.querySelector("#prio-todo").onsubmit = () => {
+			const inputValue = document.querySelector("#prio-item").value.trim()
+			const priority = document.querySelector("#priority").value
+
+			if (inputValue.length > 0) {
+				/*
+					<li class="list-group-item d-flex justify-content-between">
+						<div class="todo-item">Cras justo odio</div>
+						<div class="todo-info">
+							<span class="badge badge-pill mr-3 badge-danger">High</span>
+							<span class="todo-remove oi oi-circle-x" title="Remove"></span>
+						</div>
+					</li>
+				*/
+
+				// create element nodes
+				const li = document.createElement("li")
+				const divItem = document.createElement("div")
+				const divInfo = document.createElement("div")
+				const spanBadge = document.createElement("span")
+				const spanRemove = document.createElement("span")
+
+				// add innerHTML and attributes
+				divItem.innerHTML = inputValue
+				spanBadge.innerHTML = priority
+
+				li.classList.add("list-group-item", "d-flex", "justify-content-between")
+				divItem.classList.add("todo-item")
+				divInfo.classList.add("todo-info")
+				// spanBadge.classList.add("badge", "badge-pill", "mr-3", "badge-danger")
+				spanRemove.classList.add("todo-remove", "oi", "oi-circle-x")
+
+				spanBadge.classList.add("badge", "badge-pill", "mr-3")
+
+				if (priority == "High") {
+					spanBadge.classList.add("badge-danger")
+				} else if (priority == "Medium") {
+					spanBadge.classList.add("badge-warning")
+				} else {
+					spanBadge.classList.add("badge-success")
+				}
+
+				spanRemove.title = "Remove"
+
+				// structure and add the element nodes to DOM
+				li.appendChild(divItem)
+				li.appendChild(divInfo)
+
+				divInfo.appendChild(spanBadge)
+				divInfo.appendChild(spanRemove)
+
+				document.querySelector("#prio-list").appendChild(li)
+				document.querySelector("#prio-item").value = ''
+
+				bindRemoveBtns()
+			}
+
+			
+
+			return false
+		}
+
+
+	</script>
+
+
+
+
+
+
+
+
+</body>
+</html>

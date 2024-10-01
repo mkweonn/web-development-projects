@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Michelle Kweon | Movie DB API</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+	<style>
+		/*Mobile First Responsive Design*/
+		/* Extra small devices (portrait phones, less than 576px) */
+		/* No media query since this is the default in Bootstrap */
+
+		/* Small devices (landscape phones, 576px and up) */
+		@media (min-width: 576px) { 
+			.container {
+				max-width: 540px;
+			}
+		}
+		/* Medium devices (tablets, 768px and up) */
+		@media (min-width: 768px) { 
+			.container {
+				max-width: 720px;
+			}
+		}
+		/* Large devices (desktops, 992px and up) */
+		@media (min-width: 992px) { 
+			.container {
+				max-width: 960px;
+			}
+		}
+		/* Extra large devices (large desktops, 1200px and up) */
+		@media (min-width: 1200px) {
+			.container {
+				max-width: 1140px;
+			}
+		}
+
+		.container {
+			padding: 25px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<h1 class="col-12 mt-4">Movie Search</h1>
+		</div> <!-- .row -->
+
+		<div class="row">
+			<form class="col-12" id="search-form">
+				<div class="form-row">
+					<div class="col-12 mt-4 col-sm-6 col-lg-4">
+						<label for="search-term" class="sr-only">Search:</label>
+						<input type="text" class="form-control" id="search-term" placeholder="Search...">
+						<small id="name-error" class="form-text text-danger"></small>
+					</div>
+					<!-- <div class="col-12 mt-4 col-sm-4 col-md-3 col-lg-2">
+						<label for="search-limit" class="sr-only">Number of results:</label>
+						<select class="form-control" id="search-limit">
+							<option value="5">5 results</option>
+							<option value="10">10 results</option>
+							<option value="25">25 results</option>
+							<option value="50">50 results</option>
+							<option value="100">100 results</option>
+						</select>
+					</div> -->
+					<div class="col-12 mt-4 col-sm-auto">
+						<button type="submit" class="btn btn-primary">Search</button>
+					</div>
+				</div> <!-- .form-row -->
+			</form> 
+		</div> <!-- .row -->	
+
+		<div class="row">
+			<div class="col-12 mt-4">
+				<em>Showing <span id="num-results" class="font-weight-bold">0</span>  of <span id="total-results" class="font-weight-bold">0</span> result(s).</em>
+			</div>
+		</div> <!-- .row -->
+
+		<!-- bootstrap layout -->
+		<div id="movies-container" class="row mt-3">
+			<!-- <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-3">
+	 			<div class="card">
+					<img class="card-img" src="https://via.placeholder.com/300" alt="placeholder Image">
+	 				<div class=card-body>
+	 					<h5 class="card-title">Movie Title</h5>
+	 					<p class="card-text">Release Date:</p>
+						<p class="card-text">Rating</p>
+	 				</div>
+	 			</div>
+	 			</div>
+	 		</div>  -->
+		</div>	
+	</div> <!-- .container -->
+
+	<script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script src="displayMovie.js"></script>
+
+</body>
+</html>

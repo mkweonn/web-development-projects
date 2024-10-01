@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Michelle Kweon | Gallery Page</title>
+	
+	<link rel="stylesheet" href="shared.css">
+
+	<style>
+		#header {
+			background-image: url('img/gallery.png');
+			height: 310px;
+			background-size: cover;
+			background-position: center;
+			text-align: center;
+			line-height: 320px;
+			margin: 0px;
+		}
+		#gallery {
+			display: flex;
+			flex-wrap: wrap;
+		}
+		#mini-gallery {
+			width: 410px;
+			display: flex;
+			flex-wrap: wrap;
+			margin: 5px 0px 0px 5px;
+		}
+		#img1 {
+			width: 473px;
+			height: 280px;
+			margin: 10px 5px 5px 0px;
+			display: block;
+			background-color: lightgrey;
+		}
+		#img2 {
+			width: 473px;
+			height: 280px;
+			margin: 10px 0px 5px 5px;
+			display: block;
+			background-color: lightgrey;
+		}
+		#img3 {
+			width: 198px;
+			height: 195px;
+			margin: 0px 5px 0px 0px;
+			display: block;
+			background-color: lightgrey;
+		}
+		#img4 {
+			width: 198px;
+			height: 195px;
+			margin:  0px 0px 0px 5px;
+			display: block;
+			background-color: lightgrey;
+		}
+		#img5 {
+			width: 538px;
+			height: 400px;
+			margin: 5px 5px 5px 0px;
+			display: block;
+			background-color: lightgrey;
+		}
+		#img6 {
+			width: 198px;
+			height: 195px;
+			margin: 5px 5px 0px 0px;
+			display: block;
+			background-color: lightgrey;
+		}
+		#img7 {
+			width: 198px;
+			height: 195px;
+			margin:  5px 0px 0px 5px;
+			display: block;
+			background-color: lightgrey;
+		}
+		#img8 {
+			width: 311px;
+			height: 380px;
+			margin: 5px 5px 10px 0px;
+			display: block;
+			background-color: lightgrey;
+		}
+		#img9 {
+			width: 311px;
+			height: 380px;
+			margin: 5px 5px 10px 5px;
+			display: block;
+			background-color: lightgrey;
+		}
+		#img10 {
+			width: 311px;
+			height: 380px;
+			margin: 5px 0px 10px 5px;
+			display: block;
+			background-color: lightgrey;
+		}
+		.img-container {
+			position: relative;
+			overflow: hidden;
+			border: 1px solid #CCC;
+		}
+		.img-container > img {
+			position: relative;
+			height: auto;
+			width: 100%;
+		}
+	/*	.img-container > .height-100{
+			height: 100%;
+			width: auto;
+		}*/
+		.img-container > .caption {
+			position: absolute;
+			top:0px;
+			left: 0px;
+			right: 0px;
+			bottom: 0px;
+
+			text-align: center;
+			padding-top: 100px;
+			background-color: rgba(0, 0, 0, 0.6);
+			color: #FFF;
+
+			visibility: hidden;
+		}
+		.img-container:hover > .caption {
+			visibility: visible;
+		}
+		.img-container > .caption-400 {
+			padding-top: 150px;
+		}
+		.img-container > .caption-195 {
+			padding-top: 50px;
+		}
+		h2 {
+			text-align: center;
+		}
+		.clearfloat {
+			clear: both;
+		}
+	</style>
+</head>
+<body>
+	<div id="header">
+		<h1>Gallery</h1>
+	</div> <!-- #header -->
+
+	<div id="nav">
+		<ul>
+			<li>
+				<a href="interests_page.html">Home</a>
+				<ul>
+					<li><a href="interests_page.html#biography">About</a></li>
+					<li><a href="interests_page.html#style">Style</a></li>
+					<li><a href="interests_page.html#awards">Awards</a></li>
+					<li><a href="interests_page.html#sidebar">Works</a></li>
+				</ul>
+			</li>
+			<li><a id="active-menu" href="gallery.html">Gallery</a></li>
+		</ul>
+	</div> <!-- #nav -->	
+
+	<div id="main">
+		<div id="content">
+			<h2>More Works By Yoshitomo Nara</h2>
+				<div id="gallery">
+				<div class="img-container" id="img1">
+					<img src="img/CosmicDust.jpg" alt="Cosmic Dust artwork">
+					<div class="caption"><p>"After All I’m Cosmic Dust", 2020</p> Acrylic and colored pencil on corrugated board</div>
+				</div> <!-- img1 -->
+
+				<div class="img-container" id="img2">
+					<img src="img/face_sculptures.webp" alt="Yoshitomo Nara Pace Gallery Sculptures">
+					<div class="caption"><p>"Reach Out to The Moon, Even If We Can't", 2012</p> Fiber-reinforced polymer</div>
+				</div> <!-- img2 -->
+
+				<div class="img-container" id="img5">
+					<img src="img/Rock_Roll.jpeg" alt="Rock n Roll the Roll artwork">
+					<div class="caption caption-400"><p>"Rock n Roll the Roll", 2009</p>Acrylic on wood</div>
+				</div> <!-- img5 -->
+
+				<div id="mini-gallery">
+					<div class="img-container" id="img3">
+						<img src="img/FIre.jpeg" alt="Fire artwork">
+						<div class="caption caption-195"><p>"Fire", 2009</p> Acrylic on wood</div>
+					</div> <!-- img3 -->	
+
+					<div class="img-container" id="img4">
+						<img src="img/Sleepless_Sculpture.png" alt="Sleepless Night sculpture">
+						<div class="caption caption-195"><p>"Sleepless Night", 2007</p> Polystone, flocky processing, and mixed media</div>
+					</div> <!-- img4 -->
+
+					<div class="img-container" id="img6">
+						<img src="img/DeathOrGlory.jpg" alt="Death Or Glory drawing">
+						<div class="caption caption-195"><p>"Death or Glory", 2017</p> Pencil on paper</div>
+					</div> <!-- img6 -->
+
+					<div class="img-container" id="img7">
+						<img src="img/dog.jpeg" alt="Dog painting">
+						<div class="caption caption-195"><p>"Dog in the Night", 1995</p> Acrylic on canvas</div>
+					</div> <!-- img7 -->
+				</div> <!-- mini-gallery -->
+
+				<div class="img-container" id="img8">
+					<img src="img/Everyday_Good.png" alt="Everyday Is a Good Day vase">
+					<div class="caption caption-400"><p>"Everyday Is a Good Day", 2018</p> Ceramic</div>
+				</div> <!-- img8 -->
+
+				<div class="img-container" id="img9">
+					<img src="img/Real_One.webp" alt="Real One artwork">
+					<div class="caption caption-400"><p>"Real One", 2010</p> Colored pencil on paper</div>
+				</div> <!-- img9 -->
+
+				<div class="img-container" id="img10">
+					<img src="img/Rock_You!.jpeg" alt="Rock You! artwork">
+					<div class="caption caption-400"><p>Rock You!", 2012</p> Color pencil on paper</div>
+				</div> <!-- img10 -->
+				<!-- <div class="clearfloat"></div> -->
+			</div>  <!-- #gallery -->	
+		</div> <!-- #content -->	
+	</div> <!-- #main -->	
+
+	<div id="footer"> 
+		Michelle Kweon &copy; 2024
+	</div> <!-- #footer -->
+</body>
+</html>

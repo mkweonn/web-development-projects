@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Michelle Kweon | Smiski Collection</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link href="lib/font/css/open-iconic-bootstrap.min.css" rel="stylesheet">
+
+	<style>
+		.collect-remove {
+			cursor: pointer;
+			color: #CCC;
+		}
+		.collect-remove:hover {
+			color: #dc3545;
+		}
+		.collect-remove:active {
+			color: #ba1323;
+		}
+		img {
+			height: 100px;
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+		.collect-item {
+			display: flex;
+			align-items: center;
+		}
+	</style>
+</head>
+
+<body class="py-4">
+	<div class="container">
+		<div class="row">
+			<h1 class="col-12">SMISKI Blind Box</h1>
+		</div> <!-- .row -->
+
+		<div class="row mt-4">
+			<h2 class="col-12">Current Collection</h2>
+			<div class="col-12 mt-4">
+
+				<form id="collection">
+					<div class="form-row">
+						<div class="col-12 mt-2 col-sm-5 mt-sm-0">
+							<label for="smiski-name" class="sr-only">SMISKI Name:</label>
+
+							<input type="text" class="form-control" id="smiski-name" placeholder="SMISKI Name...">
+
+							<small id="name-error" class="form-text text-danger"></small>
+						</div> <!-- .col -->
+
+						<div class="col-12 mt-2 col-sm-3 mt-sm-0">
+							<label for="image-url" class="sr-only">Image URL:</label>
+
+							<input type="text" class="form-control" id="image-url" placeholder="Image URL...">
+						</div> <!-- .col -->
+
+						<div class="col-12 mt-2 col-sm-3 mt-sm-0">
+							<label for="series" class="sr-only">Series:</label>
+
+							<select id="series" class="form-control">
+								<option value="Series 1">Series 1</option>
+								<option value="Series 2">Series 2</option>
+								<option value="Bath">Bath</option>
+								<option value="Living">Living</option>
+								<option value="Bed">Bed</option>
+								<option value="Exercising">Exercising</option>
+								<option value="Dressing">Dressing</option>
+								<option value="Moving">Moving</option>
+							</select>
+						</div> <!-- .col -->
+
+						<div class="col-12 mt-2 col-sm-auto mt-sm-0">
+							<button role="button" type="submit" class="btn btn-primary">Add</button>
+						</div> <!-- .col -->
+					</div> <!-- .form-row -->
+				</form>
+
+			</div> <!-- .col -->
+		</div> <!-- .row -->
+
+		<div class="row">
+			<div class="col-12 col-sm-8 mt-3">
+
+				<button id="smiski-delete" class="btn btn-outline-danger mb-3">Delete All</button>
+
+				<ul id="smiski-list" class="list-group">
+					<li class="list-group-item d-flex justify-content-between">
+						<div class="collect-item">SMISKI Sweater</div>
+						<div class="collect-info">
+							<img src="https://smiski.com/e/wp-content/uploads/2022/10/img_sweater.png" alt="SMISKI Sweater">
+							<span class="badge badge-pill mr-3 badge-light">Dressing</span>
+							<span class="collect-remove oi oi-circle-x" title="Remove"></span>
+						</div>
+					</li>
+					
+					<li class="list-group-item d-flex justify-content-between">
+						<div class="collect-item">SMISKI at sleep</div>
+						<div class="collect-info">
+							<img src="https://smiski.com/e/wp-content/uploads/2019/07/img_bed_products_05.png" alt="SMISKI at sleep">
+							<span class="badge badge-pill mr-3 badge-warning">Bed</span>
+							<span class="collect-remove oi oi-circle-x" title="Remove"></span>
+						</div>
+					</li>
+				</ul>
+
+			</div> <!-- .col -->
+		</div> <!-- .row -->
+	</div> <!-- .container -->
+
+	<script>
+		function bindRemoveBtns() {
+			const removeBtns = document.querySelectorAll(".collect-remove")
+
+			for (let i = 0; i < removeBtns.length; i++) {
+				removeBtns[i].onclick = function() {
+					this.parentElement.parentElement.remove()
+				}
+			}
+		}
+
+		bindRemoveBtns()
+
+		document.querySelector("#smiski-delete").onclick = () => {
+			document.querySelector("#smiski-list").innerHTML = ''
+		}
+
+		document.querySelector("#collection").onsubmit = () => {
+			const name = document.querySelector("#smiski-name").value.trim()
+			const url = document.querySelector("#image-url").value
+			const series = document.querySelector("#series").value
+			let validForm =true
+
+			if (name.length == 0) {
+				document.querySelector("#name-error").innerHTML = "Enter a SMISKI figure name"
+				validForm = false
+			} else if (name.length > 0) {
+				// check duplicates
+				const listItems = document.querySelectorAll("#smiski-list .collect-item")
+
+				for (item of listItems) {
+					if (name === item.innerHTML) {
+						alert(name + " is already on the list.")
+						return false
+					}
+				}
+
+				/*
+					<li class="list-group-item d-flex justify-content-between flex-row">
+						<div class="collect-item">SMISKI at sleep</div>
+						<div class="collect-info">
+							<img src="https://smiski.com/e/wp-content/uploads/2019/07/img_bed_products_05.png" alt="SMISKI at sleep">
+							<span class="badge badge-pill mr-3 badge-warning">Bed</span>
+							<span class="collect-remove oi oi-circle-x" title="Remove"></span>
+						</div>
+					</li>
+				*/
+
+				// create element nodes
+				const li = document.createElement("li")
+				const divItem = document.createElement("div")
+				const divInfo = document.createElement("div")
+				const image = document.createElement("img")
+				const spanBadge = document.createElement("span")
+				const spanRemove = document.createElement("span")
+
+				// add innerHTML and attributes
+				divItem.innerHTML = name
+				image.src = url ? url: "https://smiski.com/wp-content/uploads/2016/03/s2_06.png"
+				// if (url.length == 0) {
+				// 	image.src = "https://smiski.com/wp-content/uploads/2016/03/s2_06.png"
+				// }
+				image.alt = name
+				spanBadge.innerHTML = series
+
+				li.classList.add("list-group-item", "d-flex", "justify-content-between")
+				divItem.classList.add("collect-item")
+				divInfo.classList.add("collect-info")
+
+				// image.classList.add("image")
+
+				spanRemove.classList.add("collect-remove", "oi", "oi-circle-x")
+
+				spanBadge.classList.add("badge", "badge-pill", "mr-3")
+
+				if (series == "Series 1") {
+					spanBadge.classList.add("badge-primary")
+				} else if (series == "Series 2") {
+					spanBadge.classList.add("badge-secondary")
+				} else if (series == "Bath") {
+					spanBadge.classList.add("badge-success")
+				} else if (series == "Living") {
+					spanBadge.classList.add("badge-danger")
+				} else if (series == "Bed") {
+					spanBadge.classList.add("badge-warning")
+				} else if (series == "Exercising") {
+					spanBadge.classList.add("badge-info")
+				} else if (series == "Dressing") {
+					spanBadge.classList.add("badge-light")
+				} else {
+					spanBadge.classList.add("badge-dark")
+				}
+
+				spanRemove.title = "Remove"
+
+				// structure and add the element nodes to DOM
+				li.appendChild(divItem)
+				li.appendChild(divInfo)
+
+				divInfo.appendChild(image)
+				divInfo.appendChild(spanBadge)
+				divInfo.appendChild(spanRemove)
+
+				// clear
+				document.querySelector("#smiski-list").appendChild(li)
+				document.querySelector("#smiski-name").value = ''
+				document.querySelector("#image-url").value = ''
+
+				bindRemoveBtns()
+			}
+			return false
+		}
+
+	</script>
+</body>
+</html>

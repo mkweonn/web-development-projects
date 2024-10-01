@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Michelle Kweon | Interests Page</title>
+	
+	<link rel="stylesheet" href="shared.css">
+
+	<style>
+		#header {
+			background-image: url('img/red_dress.png');
+			height: 360px;
+			background-size: cover;
+			background-position: center;
+			text-align: center;
+			line-height: 360px;
+			margin: 0px;
+		/*	text-shadow: 0px 0px 10px #000;*/
+		}
+		#sidebar {
+			width: 300px;
+			padding: 20px;
+			text-align: center;
+			line-height: 25px;
+			background-color: #ecf2f4;
+		}
+		#artist-pic {
+			width: auto;
+			height: 300px;
+			float: right;
+			margin: 0px 0px 20px 20px;
+		}
+		#style-pic {
+			width: 420px;
+			height: auto;
+			float: left;
+			margin: 0px 20px 10px 0px;
+		}
+		#recognition-pic {
+			height: 280px;
+			width: auto;
+			float: right;
+			margin: 0px 0px 20px 20px;
+		}
+		#gallery {
+			display: flex;
+			flex-direction: column;
+		/*	align-items: flex-start;
+			flex-wrap: wrap;*/
+		}
+		.sidebar-imgs{
+			width: 220px;
+		}
+		.sidebar-imgs + p {
+			visibility: hidden;
+			padding-bottom: 5px;
+		}
+		.sidebar-imgs:hover + p {
+			visibility: visible;
+		}
+	</style>
+</head>
+<body>
+	<div id="header">
+		<h1>Yoshitomo Nara</h1>
+	</div> <!-- #header -->
+
+	<div id="nav">
+		<ul>
+			<li>
+				<a id="active-menu" href="interests_page.html">Home</a>
+				<ul>
+					<li><a href="interests_page.html#biography">About</a></li>
+					<li><a href="#style">Style</a></li>
+					<li><a href="#awards">Awards</a></li>
+					<li><a href="#sidebar">Works</a></li>
+				</ul>
+			</li>
+			<li><a href="gallery.html">Gallery</a></li>
+		</ul>
+	</div> <!-- #nav -->		
+
+	<div id="main">
+		<div id="content">
+			<h2 id="biography"> About Yoshitomo Nara</h2>
+
+			<img id="artist-pic" src="img/yoshitomo_nara.jpg" alt="Yoshitomo Nara">
+
+			<p>Yoshitomo Nara (born on December 5, 1959 in Hirosaki, Aomori Prefecture, Japan) is among the most beloved Japanese artists of his generation. He lives and works in Nasushiobara, Tochigi Prefecture, though his artwork has been exhibited worldwide.</p>
+
+			<p>He recieved both a bachelor in fine arts (1985) and completed a master’s degree program at Aichi University of the Arts (1987). He moved to Germany in 1988 and enrolled at Kunstakademie Düsseldorf. After residing in Cologne, he repatriated to Japan in 2000.</p>
+
+			<p>Nara has had nearly 40 solo exhibitions since 1984 across various places such as Europe, the United States, Japan, and Asia. His art work has been housed at the MoMA and the Los Angeles County Museum of Art (LACMA). He has also had teaching experience as a guest professor in various institutions such as at the University of California Los Angeles (UCLA), National school of Fine Arts Paris (ENSBA), and Musashino Art University in Japan.</p>
+
+			<h2 id="style"> Style and Influences</h2>
+
+			<img id="style-pic" src="img/nara_style.jpeg" alt="Yoshitomo Nara Characters">
+
+			<p>Yoshitomo Nara's art is a unique blend of innocence and rebellion. The juxtaposition that has become his signature style that evolved from his early fascination with manga and anime. Influenced by punk rock and the DIY ethos, his work spans various mediums, including paintings, drawings, sculptures, and installations.</p>
+
+			<p>Nara's iconic characters, often portrayed with large, expressive eyes, symbolize his artistic expression. Themes of isolation, rebellion, and the complexities of human relationships permeate his pieces, reflecting a deep exploration of emotions, identity, and the human experience.</p>
+
+			<p>Known for powerful portraits featuring characters with piercing eyes, Nara's subjects, often described as "big-headed girls," embody kawaii (cuteness) with a dark humor. While Nara denies direct manga influence, the imagery of his 1960s childhood anime and manga is evident in his stylized, large-eyed figures, subverted with horror-like elements--a potential reaction to Japan's social conventions.</p>
+
+			<p>Nara's artistic roots extend to his musical education and the punk rock of his youth, influencing his raw encounters with inner self in menacing portraits. His upbringing in post-World War II Japan, surrounded by Western pop culture, comic books, and music, profoundly impacted his independent childhood and may explain the fiercely independent subjects in his artwork.</p>
+
+			<p>A peripatetic traveler, Nara draws inspiration from diverse sources--childhood memories, music, literature, life in Germany, exploration of roots in Japan and Asia, and exposure to modern art. Spanning over 30 years, his body of work, showcased in various mediums, reflects his conceptual process and passion for music, evident in album covers collected since adolescence. The exhibition provides a comprehensive view of Yoshitomo Nara's evolution as an artist.</p>
+
+			<h2 id="awards"> Awards and Grants</h2>
+
+			<img id="recognition-pic" src="img/nara_recognition.png" alt="Yoshitomo Nara Sotheby's Auction">
+
+			Nara's impact extends far beyond the borders of Japan where he is recognized internationally. His exhibitions have graced prestigious galleries and museums worldwide, earning him a dedicated global following. His ability to connect with people on a profound level has made his art a powerful force that transcends cultural boundaries. Yoshitomo Nara's impact on contemporary art is undeniable. His ability to capture the essence of the human spirit in a simple yet profound way has left an indelible mark on the art world.
+			<ul>
+				<li>2021 - amfAR Award of Excellence for Artistic Contributions to the Fight Against AIDS</li>
+				<li>2017 - Aichi Prefectural Art and Culture Encouragement Prize Culture Award</li>
+				<li>2016 - 2016 Asia Arts Awards</li>
+				<li> 2014 - The 67th Too Award</li>
+				<li>2013 - The 63rd The Minister of Education, Culture, Sports, Science and Technology's Art Encouragement Prize (Fine Arts)</li>
+				<li>2010 - Awarded by International Center of Catholic Charities Community Services in New York</li>
+				<li>1995 - Nagoya City Art Award, Encouragement Award</li>
+				<li>1984 - The 5th TAKIFUJI Art Award
+			</ul>
+		</div> <!-- #content -->
+
+		<div id="sidebar">
+			<h2>Notable Works</h2>
+			
+			<div id="gallery">
+				<div class="img-container">
+					<img class="sidebar-imgs" src="img/Midnight_Truth.jpg" alt="Midnight Truth"> <p><em>Midnight Truth,</em> 2017</p>
+				</div> <!-- .img-container -->
+
+				<div class="img-container">
+					<img class="sidebar-imgs" src="img/Change_History.jpg" alt="Change the History"> <p><em>Change the History,</em> 2007</p>
+				</div> <!-- .img-container -->
+
+				<div class="img-container">
+					<img class="sidebar-imgs" src="img/Miss_Forest.jpg" alt="Miss Forest"> <p><em>Miss Forest / Thinker,</em> 2016</p>
+				</div> <!-- .img-container -->
+
+				<div class="img-container">
+					<img class="sidebar-imgs" src="img/Sleepless_Night.jpg" alt="Sleepless Night Sitting"> <p><em>Sleepless Night Sitting,</em> 1997</p>
+				</div> <!-- .img-container -->
+			</div> <!-- #gallery -->
+		</div> <!-- #sidebar -->
+	</div> <!-- #main -->
+
+	<div id="footer"> 
+		Michelle Kweon &copy; 2024
+	</div> <!-- #footer -->
+</body>
+</html>
