@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Michelle Kweon | CSS Effects</title>
+	<style>
+		body {
+			background-color: #F0F8FF;
+		}
+
+		h1 {
+			font-size: 2.5em;
+			text-align: center;
+		}
+
+		#img-container {
+			width: 1000px;
+			height: auto;
+	/*		align-items: center;*/
+			text-align: center;
+			/*position: relative;*/
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 50px;
+		}
+
+		#img-container img {
+			height: 350px;
+			width: 350px;
+			transition: all 1.5s;
+		}
+
+		#img-container:hover #drum {
+			transform: scale(1) rotate(-30deg) translateX(-200px);
+		}
+
+		#img-container:hover #bone {
+			transform: scale(1) rotate(10deg) translateX(50px);
+		}
+
+		#img-container:hover #guitar {
+			transform: scale(1) rotate(30deg) translatex(300px);
+		}
+
+		#drum {
+			position: relative;
+			transform: rotate(-10deg);
+			left: 120px;
+		}
+
+		#bone {
+			position: relative;
+			right: 180px;
+			
+		}
+
+		#guitar {
+			bottom: 350px;
+			left: 50px;
+			position: relative;
+			transform: rotate(10deg);
+		}
+	</style>
+</head>
+<body>
+	<h1>Yoshitomo Nara</h1>
+	<div id="img-container"> 
+		<img id="drum" src="drum.jpeg" alt= "drum">
+		<img id="bone" src="bone.jpeg" alt= "bone">
+		<img id="guitar" src="guitar.jpeg" alt= "guitar">
+	</div> <!-- #img-container -->
+</body>
+</html>

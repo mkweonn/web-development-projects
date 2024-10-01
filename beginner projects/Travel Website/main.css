@@ -1,0 +1,75 @@
+@font-face{
+	font-family: "Gothic";
+	src:  url("fonts/gothic.ttf");
+}
+
+@font-face{
+	font-family: "Lora-Bold";
+	src:  url("fonts/Lora-Bold.ttf");
+}
+
+body {
+	background-color: #FAFAEF;
+	margin: 0px;
+	font-family: "Gothic", serif;
+}
+
+#nav {
+	background-color: #FAFAEF;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 30px;
+	margin-top: 10px;
+}
+
+#nav ul {
+/*		z-index: 1;*/
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+#nav li {
+	width: 150px;
+	text-align: center;
+	position: relative;
+	z-index: 1;
+}
+
+#nav > ul {
+	display: flex;
+	align-items: flex-start;
+}
+
+#nav a {
+	background-color: #FAFAEF;
+	text-decoration: none;
+	width: 100px;
+	height: 35px;
+	line-height: 35px;
+	border: 1.3px solid transparent;
+	display: block;
+	color: black;
+}
+
+#nav a:hover, #nav #active {
+	border: 1.3px solid black;
+}
+
+#nav > ul ul {
+	position: absolute;
+	display: none;	
+}
+
+#nav li:hover > ul {
+	display: block;
+}
+
+#footer {
+	background-color: #708090;
+	color: white;
+	height: 45px;
+	line-height: 45px;
+	text-align: center;
+	font-size: 0.9em;
+}

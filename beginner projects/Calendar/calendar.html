@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Michelle Kweon | Calendar</title>
+		<style>
+			body {
+				margin: 0px;
+			}
+
+			h1 {
+				margin: 0px;
+			}
+
+			#header {
+				background-image: url('img/flower.jpeg');
+				background-size: cover;
+				background-position: center;
+				color: #FFF;
+				font-size: 1.5em;
+				text-align: center;
+				text-shadow: 0px 0px 5px #000;
+				height: 220px;
+				line-height: 220px;
+			}
+			#main {
+				width: 700px;
+				margin-left: auto;
+				margin-right: auto;
+				padding: 10px;
+			}
+
+			table {
+				border-collapse: collapse;
+				text-align: center;
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			th {
+				border: 1px solid #CCC;
+				border-bottom: 3px solid #CCC;
+				padding: 10px 0px;
+				width: 96px;
+				/*border-collapse: separate;*/
+			}
+
+			td {
+				border: 1px solid #CCC;
+				padding: 10px;
+				width: 96px;
+				height: 96px;
+			}
+
+			.grayed_dates {
+				color: lightgray;
+
+			}
+
+			.days {
+				text-align: right;
+				vertical-align: text-top;
+			}
+
+			/*.imgs {
+				background-size: cover;
+				background-position: center;
+				width: 96px;
+				height: 96px;
+			}*/
+
+			.holiday {
+				color: black;
+				text-shadow: 0px 0px 10px #000;
+			}
+
+			#memorial_day {
+				background-image: url('img/memorial_day.png');
+				background-size: cover;
+				background-position: center;
+				color: black;
+				/*height: 96px;
+				text-align: center;
+				line-height: 50px;*/
+			}
+
+			#birthday {
+				background-image: url('img/birthday.png');
+				background-size: cover;
+				background-position: center;
+				color: black;
+				/*height: 96px;
+				text-align: center;
+				line-height: 96px;*/
+			}
+
+			#mothers_day {
+				background-image: url('img/mothers_day.png');
+				background-size: cover;
+				background-position: center;
+				color: black;
+				/*height: 96px;*/
+				/*text-align: center;*/
+				/*line-height: 96px;*/
+			}
+
+			p {
+				text-align: center;
+				color: white;
+				background-color: rgba(0, 0, 0, 0.4);
+				border-radius: 10px;
+			}
+		
+		</style>
+	</head>
+	<body>
+		
+		<div id="main">
+			<div id="header">
+				<h1>May 2023</h1>
+			</div> <!-- #header -->
+			<table>
+				<tr>
+					<th>Sun</th>
+					<th>Mon</th>
+					<th>Tue</th>
+					<th>Wed</th>
+					<th>Thu</th>
+					<th>Fri</th>
+					<th>Sat</th>
+				</tr>
+
+				<tr class="days">
+					<td class="grayed_dates">30</td>
+					<td>1</td>
+					<td>2</td>
+					<td>3</td>
+					<td>4</td>
+					<td>5</td>
+					<td>6</td>
+				</tr>
+
+				<tr class="days">
+					<td>7</td>
+					<td>8</td>
+					<td>9</td>
+					<td>10</td>
+					<td>11</td>
+					<td>12</td>
+					<td>13</td>
+				</tr>
+
+				<tr class="days">
+					<td class="holiday" id="mothers_day"><strong>14</strong><p>Mothers Day</p></td>
+					<td>15</td>
+					<td>16</td>
+					<td>17</td>
+					<td>18</td>
+					<td>19</td>
+					<td>20</td>
+				</tr>
+
+				<tr class="days">
+					<td>21</td>
+					<td>22</td>
+					<td>23</td>
+					<td>24</td>
+					<td>25</td>
+					<td class="holiday" id="birthday"><strong>26</strong> <p>My Birthday</p></td>
+					<td>27</td>
+				</tr>
+
+				<tr class="days">
+					<td>28</td>
+					<td class="holiday" id="memorial_day"><strong>29</strong> <p>Memorial Day</p></td>
+					<td>30</td>
+					<td>31</td>
+					<td class="grayed_dates">1</td>
+					<td class="grayed_dates">2</td>
+					<td class="grayed_dates">3</td>
+				</tr>
+			</table>
+		</div>
+	</body>
+</html>

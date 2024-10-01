@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Michelle Kweon | Simple Photo Gallery</title>
+	<style>
+		#gallery{
+			width: 400px;
+			margin-left: auto;
+			margin-right: auto;
+			text-align: center;
+		}
+
+		.img-container {
+			text-align: center;
+			/*display: flex;*/
+			/*align-items: flex-start;
+			align-items: center;*/
+		}
+
+		.img-container > img {
+			margin-left: auto;
+			margin-right: auto;
+			width: 250px;
+			height: auto;
+		/*	padding: 10px;*/
+		}
+
+		img + p {
+			text-align: center;
+			visibility: hidden;
+		}
+
+		img:hover + p {
+			visibility: visible;
+		}
+	</style>
+</head>
+<body>
+	<div id="gallery">
+		<h1>Famous Lacrosse Players</h1>
+		<div class="img-container">
+			<img src="img/paul_rabil.jpeg" alt="Paul Rabil">
+			<p>Paul Rabil</p>
+		</div> <!-- .img-container -->
+
+		<div class="img-container">
+			<img src="img/taylor_cummings.jpeg" alt="Taylor Cummings">
+			<p>Taylor Cummings</p>
+		</div> <!-- .img-container -->
+
+		<div class="img-container">
+			<img src="img/gary_gait.jpeg" alt="Gary Gait">
+			<p>Gary Gait</p>
+		</div> <!-- .img-container -->
+
+		<div class="img-container">
+			<img src="img/katie_schwarzmann.jpg" alt="Katie Schwarzmann">
+			<p>Katie Schwarzmann</p>
+		</div> <!-- .img-container -->
+
+		<div class="img-container">
+			<img src="img/marcus_holman.jpeg" alt="Marcus Holman">
+			<p>Marcus Holman</p>
+		</div> <!-- .img-container -->
+	</div> <!-- #gallery -->
+</body>
+</html>

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="This website will serve as a informational website for those interested in traveling to Korea. It'll have information such as places to visit, foods to eat, and other must things to do when visiting. I will specifically focus on Seoul. This page displays the popular attractions.">
+	<title>Michelle Kweon | Final Project Homepage</title>
+
+	<link rel="stylesheet" href="main.css">
+
+	<style>
+		@font-face{
+			font-family: "Souvenir";
+			src:  url("fonts/Souvenir-Medium.otf");
+		}
+
+		#main {
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		h1 {
+			float: right;
+			margin-right: 25px;
+			font-family: "Souvenir", serif;
+		}
+
+		.clearfloat {
+			clear:both;
+		}
+
+		#seoul-landscape {
+			height: 100%;
+			margin-left: 7%;
+			overflow: hidden;
+			position: relative;
+		}
+
+		#seoul-landscape > img{
+			height: 100%;
+			width: auto;
+/*			position: relative;*/
+		/*	top: ;
+			bottom: ;*/
+		}
+
+		#seoul-landscape > #seoul-caption {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			right: 0px;
+			bottom: 0px;
+
+			padding-top: 270px;
+			text-align: center;
+			color: #FFF;
+			font-size: 3em;
+		}
+
+		.empty-space {
+			width: 100%;
+			height: 70px;
+		}
+
+		h2 {
+			text-align: center;
+			margin-bottom: 30px;
+			font-family: "Lora-Bold", serif;
+		}
+
+		#tourist-attractions {
+			display: flex;
+		}
+
+		#tourist-captions {
+			display: flex;
+			text-align: center;
+		}
+
+		.img-container {
+			margin-left: auto;
+			margin-right: auto;
+			width: 370px;
+			height: 250px;
+
+			overflow: hidden;
+			position: relative;
+		}
+
+		.img-container > .caption {
+			background-color: rgba(0, 0, 0, 0.5);
+			color: #FFF;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			right: 0px;
+			bottom: 0px;
+
+			text-align: center;
+			padding-top: 50px;
+
+			visibility: hidden;
+			font-size: 90%;
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+
+		.img-container:hover > .caption {
+			visibility: visible;
+		}
+
+		.img-container > img {
+			width: 100%;
+			height: auto;
+		}
+
+		.bottom-caption {
+			margin-left: auto;
+			margin-right: auto;
+			width: 370px;
+			height: auto;
+		}
+
+		.places-container {
+			display: flex;
+			margin-bottom: 55px;
+			margin-left: auto;
+			margin-right: auto;
+			width: 600px;
+			height: 350px;
+
+			overflow: hidden;
+		}
+
+		.places-caption {
+			display: flex;
+			margin-top: 30px;
+			margin-bottom: 50px;
+			margin-left: auto;
+			margin-right: auto;
+			width: 600px;
+			height: 350px;
+		}
+
+		.places-container > img {
+			height: 100%;
+			width: auto;
+		}
+
+		.places-container > iframe {
+			height: 100%;
+			width: 600px;
+		}
+
+		#places {
+			display: flex;
+			flex-wrap: wrap;
+		}
+	</style>
+</head>
+<body>
+	<div id="main">
+		<div id="nav">
+			<ul>
+				<li><a id="active" href="final_home_page.html">Home</a></li>
+				<li><a href="final_home_page.html#content">Attractions</a>
+					<ul>
+						<li><a href="final_home_page.html#tourist">Popular</a></li>
+						<li><a href="final_home_page.html#must-see">Must See</a></li>
+					</ul>
+				</li>
+				<li><a href="second_page.html">Food</a>
+					<ul>
+						<li><a href="second_page.html#trending">Trending</a></li>
+						<li><a href="second_page.html#luxury">Luxury</a></li>
+						<li><a href="second_page.html#street">Street Food</a></li>
+					</ul>
+				</li>
+				<li><a href="">Contact</a></li>
+			</ul>
+		</div> <!-- #navbar -->
+
+		<h1>📍SEOUL, SOUTH KOREA</h1>
+
+		<div class="clearfloat"></div>
+
+		<div id="seoul-landscape">
+			<img src="img/seoul_landscape.jpeg" alt="Seoul Landscape">
+			<div id="seoul-caption">
+				s(e)oul searching...
+			</div>
+		</div> <!-- "seoul-landscape" -->
+
+		<div id="content">
+			<div class="empty-space"></div>
+			<div id="tourist">
+				<h2>Popular Tourist Attractions in Seoul</h2>
+
+				<div id="tourist-attractions">
+					<div class="img-container">
+						<img src="img/bukchon-village.webp" alt="Bukchon Hanok Village">
+						<div class="caption">
+							Take a visit to the Bukchon Hanok Village for a taste of Korean traditional culture and architecture. This preserved district of several ancient neighborhoods gives you a feel for what it was like to live in Korea 600 years ago. The neighborhoods of narrow streets feature hanoks or traditional Korean houses.
+						</div> <!-- .caption -->
+					</div> <!-- .img-container -->
+
+					<div class="img-container">
+						<img src="img/namsan-tower.jpeg" alt="N Seoul Tower">
+						<div class="caption">
+							Rising almost 500 meters, this communications and observation tower provides dramatic views of the city. A cable car whisks you up the side of Mount Namsan to the base of the tower. From here, you can go up in the tower and visit any one of four observation decks, one of which is a rotating restaurant.
+						</div> <!-- .caption -->
+					</div> <!-- .img-container -->
+
+					<div class="img-container">
+						<img src="img/gyeongbokgung-palace.png" alt="Gyeongbokgung Palace">
+						<div class="caption">
+							First built in 1395, Gyeongbokgung Palace is the largest of Seoul's five grand palaces built during the powerful Joseon dynasty. Destroyed and rebuilt several times over the centuries, it was restored to its original glory after the Second World War and totally restored in the 1990s.
+						</div> <!-- .caption -->
+					</div> <!-- .img-container -->
+				</div>	<!-- #tourist-attractions -->
+
+				<div id="tourist-captions">
+					<div class="bottom-caption">
+						<p>Bukchon Hanok Traditional Village</p>
+					</div> <!-- .bottom-caption -->
+
+					<div class="bottom-caption">
+						<p>Namsan Seoul Tower</p>
+					</div> <!-- .bottom-caption -->
+
+					<div class="bottom-caption">
+						<p>Gyeongbokgung Palace</p>
+					</div> <!-- .bottom-caption -->
+				</div> 	<!-- #tourist-captions -->
+			</div> <!-- #tourist -->
+
+			<div class="empty-space"></div>
+
+			<div id="must-see">
+				<h2>Must Visit Places</h2>
+				<div id="places">
+					<div class="places-container">
+						<img class="places-left" src="img/myeongdong.webp" alt="Myeongdong">
+					</div> <!-- #places-container -->
+
+					<div class="places-caption">
+						Myeongdong Shopping Street
+						<br>
+						It is definitely the most famous shopping spot in Seoul. The place is vibrant and is always crowded as it not only covers fast fashion shops but also the most famous brands, departmental store chains, coffee shops, restaurants, and karaoke houses. The dense grid of streets found in this bustling neighborhood are packed with almost 2 million people every day. People visit at all hours of the day looking to enjoy some of the best street food and nightlife in all of Korea.
+					</div> <!-- .places-caption -->
+
+					<div class="places-caption">
+						Lotte World Tower
+						<br>
+						This 500 meter skyscraper, one of the newest attractions in Seoul, is the tallest building in Korea and the fifth-tallest building in the world. The vase-like shape, with gentle curves, is designed to mimic traditional Korean ceramic pieces. There are several indoor and outdoor observation areas (called Seoul Sky) at the top on the 117th-123rd floors. Views are spectacular both during the day and at night, and you can see 360-degrees around the city.
+						<br>
+						On the 118th floor, there's the Sky Deck with the world's highest glass floor. The floor changes from opaque to clear, terrifying unsuspecting visitors. The journey to the top is done via super fast, double-decker elevators, with windows on one side and LED screens on the other three and on the ceiling.
+						<br>
+						Inside the tower are offices, luxury residences, and the SIGNIEL SEOUL luxury hotel. There's also the Lotte World Aquarium, Lotte Museum of Art, and an enormous shopping mall. The tower is home to the Lotte Concert Hall and  Lotte Cinema, a state-of-the-art, 21-screen MoviePlex with the world's largest movie screen.
+					</div> <!-- .places-caption -->
+
+					<div class="places-container">
+						<iframe src="https://www.youtube.com/embed/3a8pDue6ztg" title="Seoul Sky Lotte World Tower" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div> <!-- #places-container -->
+
+					<div class="places-container">
+						<img class="places-left" src="img/Bukhansan.jpeg" alt="Bukhansan National Park">
+					</div> <!-- #places-container -->
+
+					<div class="places-caption">
+						Bukhansan National Park
+						<br>
+						One of the most popular pastimes in Seoul is hiking at this stunning national park just outside the city. Aside from a variety of hiking trails for every skill level, you’ll also see lots of flora and fauna, forests, temples and ancient fortresses. The park has three peaks -- Baekundae, Insubong, and Mangnyeongdae – all of which are great to hike. Overlooking Seoul, the scenery is stunning. Despite the park’s overwhelming popularity, it is still possible to find secluded spots to relax and take in the fabulous views.
+
+						Among the many highlights on show is the historic Bukhansanseong Fortress and its winding wall, which snakes its way so delightfully along the hills and mountainsides of the national park.
+					</div> <!-- .places-caption -->
+				</div> <!-- #places -->
+			</div> <!-- #must-see -->
+
+			<div class="clearfloat"></div>
+
+		</div> <!-- #content -->
+	</div> <!-- #main -->
+
+	<div id="footer">
+		<p>Michelle Kweon &copy; 2022</p>
+	</div> <!-- #footer -->
+</body>
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="This website will serve as a informational website for those interested in traveling to Korea. It'll have information such as places to visit, foods to eat, and other must things to do when visiting. I will specifically focus on Seoul. This page displays the various food options in Seoul such as trending, luxury, and street food.">
+	<title>Michelle Kweon | Final Project Second Page</title>
+
+	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="carousel/carousel.css">
+
+	<style>
+		#main {
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		#content {
+			margin: 25px;
+		}
+
+		h3 {
+			font-family: "Lora-Bold", serif;
+			margin-bottom: 25px;
+			margin-top: 25px;
+		}
+
+		#instagram {
+			margin-left: auto;
+			margin-right: auto;
+			display: flex;
+			flex-wrap: wrap;
+			width: 950px;
+			align-items: center;
+		}
+
+		.img-container {
+			width: 280px;
+			height: 280px;
+
+			margin: 12px;
+
+			overflow: hidden;
+			position: relative;
+		}
+
+		.img-container > img {
+			height: 100%;
+			width: auto;
+		}
+
+		#width-100 > img {
+			width: 100%;
+			height: auto;
+		}
+
+		.img-container > .caption {
+			background-color: rgba(0, 0, 0, 0.5);
+			color: #FFF;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			right: 0px;
+			bottom: 0px;
+
+			text-align: center;
+			padding-top: 80px;
+
+			visibility: hidden;
+			font-size: 90%;
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+
+		.img-container:hover > .caption {
+			visibility: visible;
+			cursor: pointer;
+		}
+
+		.empty-space {
+			width: 100%;
+			height: 70px;
+		}
+
+		#lux-caption {
+			text-align: center;
+			margin: 20px;
+		}
+
+		#street-food {
+			margin-left: auto;
+			margin-right: auto;
+			align-items: center;
+			width: 1200px;
+			display: flex;
+		}
+
+		.street-img {
+			width: 240px;
+			height: 300px;
+			overflow: hidden;
+			margin: 30px;
+		}
+
+		.street-img > img {
+			width: 240px;
+			height: 300px;
+			border-top-left-radius: 35%;
+			border-top-right-radius: 35%;
+		}
+
+		#street-captions {
+			display: flex;
+			text-align: center;
+			margin-left: auto;
+			margin-right: auto;
+			width: 1200px;
+		}
+
+		.bottom-caption {
+			margin: 30px;
+			width: 240px;
+			height: auto;
+		}
+	</style>
+</head>
+<body>
+	<div id="main">
+		<div id="nav">
+			<ul>
+				<li><a href="final_home_page.html">Home</a></li>
+				<li><a href="final_home_page.html#content">Attractions</a>
+					<ul>
+						<li><a href="final_home_page.html#tourist">Popular</a></li>
+						<li><a href="final_home_page.html#must-see">Must See</a></li>
+					</ul>
+				</li>
+				<li><a id="active" href="second_page.html">Food</a>
+					<ul>
+						<li><a href="second_page.html#trending">Trending</a></li>
+						<li><a href="second_page.html#luxury">Luxury</a></li>
+						<li><a href="second_page.html#street">Street Food</a></li>
+					</ul>
+				</li>
+				<li><a href="third_page.html">Contact</a></li>
+			</ul>
+		</div> <!-- #nav -->
+		
+		<div id="content">
+			<div id="trending">
+				<h3>Trending/As seen on Instagram</h3>
+				<div id="instagram">
+					<div class="img-container" id="width-100">
+						<img src="img/purple-icecream.png" alt="Purple Ice Cream">
+						<div class="caption">
+							<p>Purple Ice Cream at Ikseon Goro Purple Berry Ice Cream</p>
+							(166-34 Ikseon-dong, Jongno-gu, Seoul, South Korea)
+						</div> <!-- .caption -->
+					</div> <!-- .img-container -->
+
+					<div class="img-container">
+						<img src="img/curry.png" alt="Curry Donkatsu">
+						<div class="caption">
+							<p>Curry Donkatsu at Baekseongdang</p>
+							(228-2 Yeonnam-dong, Mapo-gu, Seoul, South Korea (second floor))
+						</div> <!-- .caption -->
+					</div> <!-- .img-container -->
+
+					<div class="img-container">
+						<img src="img/kakao.png" alt="Kakao Character Desert">
+						<div class="caption">
+							<p>Kakao Character Mango Slushies and Cakes at the Ryan Café</p>
+							(162 Yanghwa-ro, Seogyo-dong, Mapo-gu, Seoul, South Korea)
+						</div> <!-- .caption -->
+					</div> <!-- .img-container -->
+
+					<div class="img-container">
+						<img src="img/kbbq.png" alt="Korean Barbecue">
+						<div class="caption">
+							<p>Korean BBQ at Guwooso</p>
+							(199-1 Donggyo-ro, Seogyo-dong, Mapo-gu, Seoul, South Korea)
+						</div> <!-- .caption -->
+					</div> <!-- .img-container -->
+
+					<div class="img-container">
+						<img src="img/sulbing.jpeg" alt="Sulbing Bingsu">
+						<div class="caption">
+							<p>Bingsu at Sulbing</p>
+							(15 Hongik-ro 6-gil, Seogyo-dong, Mapo-gu, Seoul, South Korea)
+						</div> <!-- .caption -->
+					</div> <!-- .img-container -->
+
+					<div class="img-container">
+						<img src="img/dakgalbi.webp" alt="Dakgablbi">
+						<div class="caption">
+							<p>Okeunnae Dakgalbi</p>
+							(15 Ichon-ro 29-gil, Yongsan-gu, Seoul, South Korea)
+						</div> <!-- .caption -->
+					</div> <!-- .img-container -->
+				</div> <!-- #instagram -->
+			</div><!-- #trending -->
+
+			<div class="empty-space"></div>
+
+			<div id="luxury">
+				<h3>Luxury Foods</h3>
+				<div class="carousel">
+				  <ul class="ct clearfix">
+				    <li><a href="#"><img src="img/jungsik.jpeg" alt="Jungsik"></a></li>
+				    <li><a href="#"><img src="img/LaYeon.webp" alt="La Yeon"></a></li>
+				    <li><a href="#"><img src="img/gaon.jpeg" alt="Gaon"></a></li>
+				  </ul>
+			<!-- 	  <a href="#" class="arrow pre"><</a>
+				  <a href="#" class="arrow next">></a> -->
+				  <ul class="bullet">
+				    <li class="active"></li>
+				    <li></li>
+				    <li></li>
+				  </ul>
+				</div> <!-- .carousel -->
+			</div> <!-- #luxury -->
+
+			<div id="lux-caption">
+				<p>1. Jungsik Seoul (2 Michelin Stars)</p>
+				<p>2. La Yeon (2 Michelin Stars)</p>
+				<p>3. Gaon (3 Michelin Stars)</p>
+			</div> <!-- #lux-caption -->
+
+			<div class="empty-space"></div>
+
+			<div id="street">
+				<h3>Must Try Street Foods/Snacks</h3>
+				<div id="street-food">
+					<div class="street-img">
+						<img src="img/tteokbokki.jpeg" alt="Tteokbokki">
+					</div> <!-- #street-img-->
+					<div class="street-img">
+						<img src="img/kkwabaegi.jpeg" alt="Kkwabaegi">
+					</div> <!-- #street-img-->
+					<div class="street-img">
+						<img src="img/corndog.webp" alt="Korean Corndog">
+					</div> <!-- #street-img-->
+					<div class="street-img">
+						<img src="img/bungeo-ppang.jpg" alt="Bungeo-ppang">
+					</div> <!-- #street-img-->
+				</div> <!-- #street-food-->
+
+				<div id="street-captions">
+					<div class="bottom-caption">
+						<p>Tteokbokki (Spicy Rice Cake)</p>
+					</div> <!-- .bottom-caption -->
+
+					<div class="bottom-caption">
+						<p>Kkwabaegi (Twisted Korean Doughnuts)</p>
+					</div> <!-- .bottom-caption -->
+
+					<div class="bottom-caption">
+						<p>Korean Corndogs</p>
+					</div> <!-- .bottom-caption -->
+
+					<div class="bottom-caption">
+						<p>Bungeoppang (Korean Fish Shaped Pastry)</p>
+					</div> <!-- .bottom-caption -->
+				</div> 	<!-- #street-captions -->
+
+			</div> <!-- #street -->
+
+		</div> <!-- #content -->
+	</div> <!-- #main -->
+
+	<div id="footer">
+			<p>Michelle Kweon &copy; 2022</p>
+	</div> <!-- #footer -->
+
+	<script src="//code.jquery.com/jquery.min.js"></script>
+	<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="carousel/carousel.js"></script>
+</body>
+</html>

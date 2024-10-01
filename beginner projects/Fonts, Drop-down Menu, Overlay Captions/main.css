@@ -1,0 +1,117 @@
+body {
+	background-color: #8FBC8F;
+	margin: 0px;
+}
+
+/*#header {
+	background-image: url("img/lacrosse_stick.jpeg");
+	height: 320px;
+	background-size: cover;
+	background-position: center;
+
+	color: #FFF;
+	font-size: 1.5em;
+	text-align: center;
+	line-height: 320px;
+
+	text-shadow: 0px 0px 20px #000;
+	padding: 10px;
+}*/
+
+@font-face{
+		font-family: "Extraordinaire";
+		src: url("fonts/Extraordinaire.ttf");
+}
+
+#main {
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+}
+
+/*#content {
+	background-color: white;
+	width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px;
+	background-position: center;
+}*/
+
+#footer {
+	background-color: #777;
+	text-align: center;
+	color: #FFF;
+/*	height: 50px;*/
+	/*line-height: 50px;*/
+	padding: 10px;
+}
+
+.clearfloat {
+	clear: both;
+}
+
+#navbar {
+	background-color: #777;
+/*	box-shadow: 0px 2px 10px grey;*/
+/*	position:  fixed;*/
+	/*top: 0px;
+	left: 0px;
+	right: 0px;*/
+
+/*	z-index: 1;*/
+	display: flex;
+	justify-content: center;
+}
+
+#navbar ul {
+	z-index: 1;
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+#navbar li {
+	width: 250px;
+	text-align: center;
+
+	position: relative;
+}
+
+#navbar > ul {
+	display: flex;
+	align-items: flex-start;
+}
+
+#navbar a {
+	text-decoration: none;
+	background-color: #777;
+	width: 250px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+
+	display: block;
+	color: white;
+	/*border-bottom: 2px solid #777;*/
+}
+
+#navbar a:hover, #navbar #active-nav {
+	/* 
+		This CSS only applies to <a> tags
+		that are being hovered over.
+	*/
+	background-color: #C0C0C0;
+	color: white;
+	/*border-bottom: 2px solid white;*/
+}
+
+#navbar > ul ul {
+	position: absolute;
+	display: none;
+}
+
+#navbar li:hover > ul {
+	display: block;
+}

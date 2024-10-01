@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="This page acts as the last page for the informational website on Seoul, South Korea. The page includes a form page for any interested audience who would like more information on the places presented on the website or for any other questions regarding Korea.">
+	<title>Michelle Kweon | Final Project Third Page</title>
+
+	<link rel="stylesheet" href="main.css">
+
+	<style>
+		#main {
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		#seoul-cover{
+			height: 700px;
+		/*	height: 100%;*/
+			margin-right: 7%;
+			overflow: hidden;
+			position: relative;
+		}
+
+		#seoul-cover > img{
+			height: 100%;
+			width: auto;
+		/*	height: 150%;*/
+/*			width: auto;*/
+		}
+
+		#seoul-cover > #seoul-caption {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			right: 0px;
+			bottom: 0px;
+
+			padding-top: 150px;
+			text-align: center;
+			color: #FFF;
+			font-size: 2em;
+		}
+
+		.empty-space {
+			width: 100%;
+			height: 50px;
+		}
+
+		#contact {
+			display: flex;
+			align-content: center;
+		}
+
+		.container {
+			margin-left: auto;
+			margin-right: auto;
+			padding: 10px;
+			width: 600px;
+			height: 570px;
+			margin-top: 70px;
+
+				/*overflow: hidden;
+				position: relative;*/
+		}
+
+		.container > img {
+			margin-left: 40px;
+			width: 450px;
+			height: 450px;
+			border-radius: 50%;
+		}
+
+		h3 {
+			text-align: center;
+			margin-top: 50px;
+		}
+
+		.form-row {
+			width: 400px;
+			margin-right: auto;
+			margin-left: auto;
+			margin-bottom: 25px;
+		/*	display: flex;*/
+		}
+
+		.form-col {
+			width: 400px;
+			margin-right: auto;
+			margin-left: auto;
+			margin-bottom: 10px;
+		}
+
+		input {
+			width:  400px;
+			height: 25px;
+		}
+
+		textarea {
+			width:  400px;
+			height: 35px;
+		}
+
+		#buttons{
+			width: 400px;
+			/*margin-right: auto;
+			margin-left: auto;*/
+	
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div id="main">
+		<div id="nav">
+			<ul>
+				<li><a href="final_home_page.html">Home</a></li>
+				<li><a href="final_home_page.html#content">Attractions</a>
+					<ul>
+						<li><a href="final_home_page.html#tourist">Popular</a></li>
+						<li><a href="final_home_page.html#must-see">Must See</a></li>
+					</ul>
+				</li>
+				<li><a href="second_page.html">Food</a>
+					<ul>
+						<li><a href="second_page.html#trending">Trending</a></li>
+						<li><a href="second_page.html#luxury">Luxury</a></li>
+						<li><a href="second_page.html#street">Street Food</a></li>
+					</ul>
+				</li>
+				<li><a id="active" href="third_page.html">Contact</a></li>
+			</ul>
+		</div> <!-- #nav -->
+
+		<div id="seoul-cover">
+			<img src="img/seoul_u.jpeg" alt="I SEOUL U' sculpture">
+			<div id="seoul-caption">
+				We'd love to hear from you!
+			</div>
+		</div> <!-- "seoul-cover" -->
+
+		<div class="empty-space"></div>
+
+		<div id="contact">
+			<div class="container">
+				<h3> Contact Us </h3>
+
+				<form action="confirmation.html">
+
+					<div class="form-row">
+						<div class="form-col">
+							<label for="name-id">Name</label>
+						</div>
+						<input id="name-id" type="text" placeholder="John Doe">
+					</div> <!-- .form-row -->
+
+					<div class="form-row">
+
+						<div class="form-col">
+							<label for="email-id">Email</label>
+						</div>
+
+						<input id="email-id" type="email" placeholder="johndoe@gmail.com">
+					</div> <!-- .form-row -->
+
+					<div class="form-row">
+
+						<div class="form-col">
+							<label for="msg">Message</label>
+						</div>
+
+						<textarea id="msg" placeholder="Type here"></textarea>
+
+					</div> <!-- .form-row -->
+
+	
+					<div class="form-row">
+					<div id="buttons">
+							<button type="submit">Submit</button>
+							<button type="reset">Clear</button>
+						</div>
+					</div> <!-- .form-row -->
+				</form>
+			</div> <!-- #container -->
+
+			<div class="container">
+				<img src="img/seoul_flower.jpeg" alt="Gyeongbokgung Palace">
+			</div> <!-- #container -->
+
+		</div> <!-- #contact -->
+	</div> <!-- #main -->
+
+	<div id="footer">
+		<p>Michelle Kweon &copy; 2022</p>
+	</div> <!-- #footer -->
+</body>
+</html>

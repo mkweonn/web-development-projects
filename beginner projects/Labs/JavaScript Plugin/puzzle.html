@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Michelle Kweon | JavaScript Plugin</title>
+		<style>
+			h1 {
+				text-align: center;
+			}
+
+			#imgs {
+				margin-left: auto;
+				margin-right: auto;
+				width: 880.6px;
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+			}
+
+			.img-container {
+				width: 293.5px;
+				height: 375px;
+			}
+
+
+			.img-container > img {
+				height: 100%;
+				width: auto;
+				margin: 0px;
+			}
+
+			#top-right {
+				position: relative;
+				bottom: -15px;
+				left: -40px;
+				box-shadow: -10px 10px 10px;
+			}
+
+			#middle-left {
+				position: relative;
+				bottom: -15px;
+				left: -30px;
+				box-shadow: 10px 10px 10px;
+			}
+
+			#bottom-right {
+				position: relative;
+				bottom: -30px;
+				left: 45px;
+				box-shadow: -10px -10px 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Frank Ocean Blonde Album Poster</h1>
+		<div id="imgs">
+			<div class="img-container">
+				<img src="img/row-1-column-1.jpg" alt="top left piece" class="draggable">
+			</div> <!-- .img-container -->
+
+			<div class="img-container">
+				<img src="img/row-1-column-2.jpg" alt="top middle piece" class="draggable">
+			</div> <!-- .img-container -->
+
+			<div class="img-container">
+				<img id="top-right" src="img/row-1-column-3.jpg" alt="top right piece" class="draggable">
+			</div> <!-- .img-container -->
+
+			<div class="img-container">
+				<img id="middle-left" src="img/row-2-column-1.jpg" alt="middle left piece" class="draggable">
+			</div> <!-- .img-container -->
+
+			<div class="img-container">
+				<img src="img/row-2-column-2.jpg" alt="center piece" class="draggable">
+			</div> <!-- .img-container -->
+
+			<div class="img-container">
+				<img src="img/row-2-column-3.jpg" alt="middle right piece" class="draggable">
+			</div> <!-- .img-container -->
+
+			<div class="img-container">
+				<img src="img/row-3-column-1.jpg" alt="bottom left piece" class="draggable">
+			</div> <!-- .img-container -->
+
+			<div class="img-container">
+				<img src="img/row-3-column-2.jpg" alt="bottom middle piece" class="draggable">
+			</div> <!-- .img-container -->
+
+			<div class="img-container">
+				<img id="bottom-right" src="img/row-3-column-3.jpg" alt="bottom right piece" class="draggable">
+			</div> <!-- .img-container -->
+		</div> <!-- #imgs -->
+
+		<script src="draggabilly/draggabilly.pkgd.min.js"></script>
+
+		<script>
+			var elem = document.querySelector('.draggable');
+			var draggie = new Draggabilly( elem, {
+			  // options...
+			});
+
+			// or pass in selector string as first argument
+			var draggie = new Draggabilly( '.draggable', {
+			  // options...
+			});
+
+			// if you have multiple .draggable elements
+			// get all draggie elements
+			var draggableElems = document.querySelectorAll('.draggable');
+			// array of Draggabillies
+			var draggies = []
+			// init Draggabillies
+			for ( var i=0; i < draggableElems.length; i++ ) {
+			  var draggableElem = draggableElems[i];
+			  var draggie = new Draggabilly( draggableElem, {
+			    // options...
+			  });
+			  draggies.push( draggie );
+			}
+		</script>
+	</body>
+	</html>
