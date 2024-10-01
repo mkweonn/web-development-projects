@@ -1,1 +1,2 @@
-# web-development-projects
+# Web Development Projects
+Here are some projects I have completed while taking two courses "Intro to Web Development" and "Full-Stack Web Development". I created static websites using core front-end languages such as HTML, CSS, JavaScript. For my final project (Cafe Website), I used basic database design and relational database management in order to submit SQL queries to databases and create data interfaces using PHP. Bootstrap (CSS) and jQuery (JS) were also implemented throughout projects.
